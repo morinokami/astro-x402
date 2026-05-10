@@ -7,14 +7,14 @@ Astro middleware integration for the [x402 Payment Protocol](https://github.com/
 ## Installation
 
 ```bash
-pnpm add astro-x402 @x402/core
+pnpm add astro-x402 @x402/core @x402/evm
 # Optional: install the paywall UI
 pnpm add @x402/paywall
 ```
 
 ## Requirements
 
-- **Astro `>=4.13`** with **on-demand rendering enabled** (`output: "server"` or `output: "hybrid"` and `prerender = false` on protected routes). x402 middleware requires SSR because payment verification and settlement happen at request time.
+- **Astro `>=4.13`** with **on-demand rendering enabled** (`output: "server"` or `output: "hybrid"` and `prerender = false` on protected routes). Your Astro app must be configured for SSR with an adapter, such as `@astrojs/node`, because payment verification and settlement happen at request time.
 
 ## Quick Start
 
@@ -25,7 +25,7 @@ import { paymentMiddleware, x402ResourceServer } from "astro-x402";
 import { ExactEvmScheme } from "@x402/evm/exact/server";
 import { HTTPFacilitatorClient } from "@x402/core/server";
 
-const facilitatorClient = new HTTPFacilitatorClient({ url: "https://facilitator.x402.org" });
+const facilitatorClient = new HTTPFacilitatorClient({ url: "https://x402.org/facilitator" });
 const resourceServer = new x402ResourceServer(facilitatorClient).register(
   "eip155:84532",
   new ExactEvmScheme(),
@@ -38,6 +38,7 @@ export const onRequest = paymentMiddleware(
         scheme: "exact",
         price: "$0.10",
         network: "eip155:84532",
+        // Replace with your receiving EVM wallet address.
         payTo: "0xYourAddress",
       },
       description: "Access to premium content",
@@ -146,7 +147,7 @@ The middleware extracts these overrides before settlement and strips the header 
 
 - **`prerender = false` is required** on routes that should require payment. If a route is statically prerendered, the middleware runs at build time and the payment check has no effect at request time.
 - The middleware handles both `.astro` pages and API endpoints (`src/pages/**/*.{ts,js}`) uniformly because Astro middleware is invoked for both.
-- For Cloudflare/Vercel edge adapters, `Buffer` is required (the `@x402/core` settlement extension reads the response body as a `Buffer`). Enable Node.js compatibility on your adapter.
+- For edge adapters, this package currently uses `Buffer` when passing the response body into settlement processing. Enable Node.js compatibility or use an adapter/runtime that provides `Buffer`.
 
 ## License
 
