@@ -1,3 +1,5 @@
+// Adapted from @x402/hono tests for Astro's APIContext.
+
 import { describe, it, expect } from "vitest";
 import type { APIContext } from "astro";
 import { AstroAdapter } from "./adapter";

@@ -74,7 +74,6 @@
     "dist",
     "LICENSE",
     "NOTICE",
-    "README.md",
-    "CHANGELOG.md"
+    "README.md"
   ]
 }

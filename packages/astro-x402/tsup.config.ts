@@ -1,6 +1,9 @@
 import { defineConfig } from "tsup";
 
 const baseConfig = {
+  banner: {
+    js: "/* astro-x402 includes code adapted from @x402/hono for Astro. See NOTICE. */",
+  },
   entry: {
     index: "src/index.ts",
   },

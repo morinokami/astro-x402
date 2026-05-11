@@ -1,3 +1,5 @@
+// Adapted from @x402/hono for Astro middleware and Request/Response APIs.
+
 import {
   HTTPRequestContext,
   PaywallConfig,

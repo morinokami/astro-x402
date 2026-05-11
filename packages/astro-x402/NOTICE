@@ -4,9 +4,9 @@ Copyright 2026 Shinya Fujino
 This product includes software derived from the x402 reference implementation:
 
   x402 (https://github.com/x402-foundation/x402)
-  Copyright x402 Foundation
+  Copyright 2024 Coinbase
   Licensed under the Apache License, Version 2.0
 
-The Astro middleware code in this package is adapted from `@x402/hono`
-and follows the same architectural patterns as the other framework
-adapters in the upstream repository.
+The Astro middleware code and tests in this package are adapted from
+`@x402/hono`, authored by the x402 Foundation, with changes for Astro's
+middleware and Request/Response APIs.

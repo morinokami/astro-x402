@@ -1,3 +1,5 @@
+// Adapted from @x402/hono tests for Astro middleware behavior.
+
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import type { APIContext } from "astro";
 import type {
