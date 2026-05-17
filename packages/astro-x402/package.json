@@ -50,11 +50,19 @@
     "@x402/extensions": "^2.11.0"
   },
   "peerDependencies": {
-    "astro": ">=4.13.0",
-    "@x402/paywall": "^2.11.0"
+    "astro": ">=5.0.0",
+    "@x402/paywall": "^2.11.0",
+    "@x402/evm": "^2.11.0",
+    "@x402/svm": "^2.11.0"
   },
   "peerDependenciesMeta": {
     "@x402/paywall": {
+      "optional": true
+    },
+    "@x402/evm": {
+      "optional": true
+    },
+    "@x402/svm": {
       "optional": true
     }
   },
