@@ -1,6 +1,6 @@
 import { x402Client } from "@x402/core/client";
-import { wrapFetchWithPayment } from "@x402/fetch";
 import { ExactEvmScheme } from "@x402/evm/exact/client";
+import { wrapFetchWithPayment } from "@x402/fetch";
 import { privateKeyToAccount } from "viem/accounts";
 
 const privateKey = process.env.PK;

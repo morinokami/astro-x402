@@ -1,7 +1,9 @@
 // Adapted from @x402/hono tests for Astro's APIContext.
 
-import { describe, it, expect } from "vitest";
 import type { APIContext } from "astro";
+
+import { describe, it, expect } from "vite-plus/test";
+
 import { AstroAdapter } from "./adapter";
 
 /**
@@ -29,7 +31,7 @@ function createMockContext(
   };
   if (options.body !== undefined && (options.method ?? "GET") !== "GET") {
     init.body = JSON.stringify(options.body);
-    init.headers = { "Content-Type": "application/json", ...(options.headers || {}) };
+    init.headers = { "Content-Type": "application/json", ...options.headers };
   }
   const request = new Request(url.toString(), init);
   return { request, url } as unknown as APIContext;

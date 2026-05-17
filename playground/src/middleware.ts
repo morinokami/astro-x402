@@ -1,6 +1,6 @@
-import { paymentMiddleware, x402ResourceServer } from "astro-x402";
 import { HTTPFacilitatorClient } from "@x402/core/server";
 import { ExactEvmScheme } from "@x402/evm/exact/server";
+import { paymentMiddleware, x402ResourceServer } from "astro-x402";
 
 const facilitator = new HTTPFacilitatorClient({
   url: "https://x402.org/facilitator",

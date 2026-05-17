@@ -1,6 +1,6 @@
 // Adapted from @x402/hono for Astro's APIContext.
 
-import { HTTPAdapter } from "@x402/core/server";
+import type { HTTPAdapter } from "@x402/core/server";
 import type { APIContext } from "astro";
 
 /**
