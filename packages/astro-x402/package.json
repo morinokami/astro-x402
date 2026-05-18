@@ -51,9 +51,7 @@
     "@typescript/native-preview": "7.0.0-dev.20260517.1",
     "astro": "6.3.3",
     "typescript": "5.9.3",
-    "vite": "catalog:",
-    "vite-plus": "catalog:",
-    "vitest": "catalog:"
+    "vite-plus": "catalog:"
   },
   "peerDependencies": {
     "@x402/paywall": "^2.11.0",

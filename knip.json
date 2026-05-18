@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "tags": ["-lintignore"],
+  "workspaces": {
+    ".": {
+      "entry": ["vite.config.ts"]
+    },
+    "packages/astro-x402": {
+      "entry": ["vite.config.ts", "src/index.ts", "src/**/*.test.ts"],
+      "ignoreDependencies": ["@typescript/native-preview"]
+    },
+    "playground": {
+      "entry": ["src/**/*.astro", "scripts/**/*.ts"]
+    }
+  }
+}
