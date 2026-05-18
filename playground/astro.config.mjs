@@ -1,7 +1,7 @@
 // @ts-check
 import node from "@astrojs/node";
-import { defineConfig } from "astro/config";
 import x402 from "astro-x402";
+import { defineConfig } from "astro/config";
 
 const payTo = process.env.PAY_TO_ADDRESS ?? "0x0000000000000000000000000000000000000001";
 

@@ -1,8 +1,9 @@
-import { writeFileSync, mkdirSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import { dirname } from "node:path";
-import type { AstroIntegration } from "astro";
 import type { RouteConfig, PaywallConfig } from "@x402/core/server";
+import type { AstroIntegration } from "astro";
+
+import { writeFileSync, mkdirSync } from "node:fs";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 
 /**
  * Route config with function-valued fields removed. Those fields require a
@@ -159,7 +160,7 @@ export function renderGeneratedMiddleware(cfg: SerializedConfig): string {
   const namespaces = detectNamespaces(cfg.routes);
 
   const schemeRegistrations = namespaces
-    .map(ns => {
+    .map((ns) => {
       const reg = SCHEME_REGISTRY[ns];
       if (!reg) {
         // Unknown namespace — emit a runtime error so the user knows the

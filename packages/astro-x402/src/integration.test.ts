@@ -1,8 +1,9 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
 import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
+import { describe, it, expect, vi, beforeEach } from "vite-plus/test";
+
 import { x402, renderGeneratedMiddleware, detectNamespaces } from "./integration";
 
 const validRoutes = {
@@ -32,7 +33,7 @@ function runSetupHook(integration: ReturnType<typeof x402>) {
   const logger = { info: vi.fn(), warn: vi.fn(), error: vi.fn(), debug: vi.fn(), fork: vi.fn() };
 
   // Cast to any: we only exercise the methods the integration uses.
-  integration.hooks["astro:config:setup"]!({
+  void integration.hooks["astro:config:setup"]!({
     addMiddleware,
     createCodegenDir,
     logger,
