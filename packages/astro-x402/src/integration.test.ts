@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { describe, it, expect, vi, beforeEach } from "vite-plus/test";
 
-import { x402, renderGeneratedMiddleware, detectNamespaces } from "./integration";
+import x402, { renderGeneratedMiddleware, detectNamespaces } from "./integration";
 
 const validRoutes = {
   "/api/premium": {

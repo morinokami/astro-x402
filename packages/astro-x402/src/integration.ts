@@ -37,7 +37,7 @@ export interface X402IntegrationOptions {
  * URL used when the user does not specify `facilitator`. Matches the public
  * facilitator referenced by the x402 ecosystem.
  */
-export const DEFAULT_FACILITATOR_URL = "https://x402.org/facilitator";
+const DEFAULT_FACILITATOR_URL = "https://x402.org/facilitator";
 
 /**
  * Type guard for non-array plain objects.
@@ -256,7 +256,7 @@ export const onRequest = paymentMiddleware(
  * });
  * ```
  */
-export function x402(options: X402IntegrationOptions): AstroIntegration {
+function x402(options: X402IntegrationOptions): AstroIntegration {
   validateOptions(options);
 
   const facilitatorDefaulted = options.facilitator === undefined;
