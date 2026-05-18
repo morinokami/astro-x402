@@ -6,6 +6,39 @@ settings:
 
 catalogs:
   default:
+    '@astrojs/node':
+      specifier: 10.1.1
+      version: 10.1.1
+    '@types/node':
+      specifier: 24.12.4
+      version: 24.12.4
+    '@typescript/native-preview':
+      specifier: 7.0.0-dev.20260517.1
+      version: 7.0.0-dev.20260517.1
+    '@x402/core':
+      specifier: 2.12.0
+      version: 2.12.0
+    '@x402/evm':
+      specifier: 2.12.0
+      version: 2.12.0
+    '@x402/extensions':
+      specifier: 2.12.0
+      version: 2.12.0
+    '@x402/fetch':
+      specifier: 2.12.0
+      version: 2.12.0
+    astro:
+      specifier: 6.3.3
+      version: 6.3.3
+    knip:
+      specifier: 6.14.1
+      version: 6.14.1
+    typescript:
+      specifier: 5.9.3
+      version: 5.9.3
+    viem:
+      specifier: 2.49.3
+      version: 2.49.3
     vite-plus:
       specifier: latest
       version: 0.1.21
@@ -15,13 +48,13 @@ importers:
   .:
     devDependencies:
       '@types/node':
-        specifier: 24.12.4
+        specifier: 'catalog:'
         version: 24.12.4
       knip:
-        specifier: 6.14.1
+        specifier: 'catalog:'
         version: 6.14.1(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)
       typescript:
-        specifier: 5.9.3
+        specifier: 'catalog:'
         version: 5.9.3
       vite-plus:
         specifier: 'catalog:'
@@ -30,26 +63,26 @@ importers:
   packages/astro-x402:
     dependencies:
       '@x402/core':
-        specifier: 2.12.0
+        specifier: 'catalog:'
         version: 2.12.0
       '@x402/extensions':
-        specifier: 2.12.0
+        specifier: 'catalog:'
         version: 2.12.0(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@x402/paywall':
         specifier: ^2.11.0
         version: 2.11.0(@solana/sysvars@6.9.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(@tanstack/query-core@5.100.9)(algosdk@3.5.2)(bufferutil@4.1.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(typescript@5.9.3)(use-sync-external-store@1.4.0(react@19.2.6))(utf-8-validate@5.0.10)(ws@8.20.0(bufferutil@4.1.0)(utf-8-validate@5.0.10))
     devDependencies:
       '@types/node':
-        specifier: 24.12.4
+        specifier: 'catalog:'
         version: 24.12.4
       '@typescript/native-preview':
-        specifier: 7.0.0-dev.20260517.1
+        specifier: 'catalog:'
         version: 7.0.0-dev.20260517.1
       astro:
-        specifier: 6.3.3
+        specifier: 'catalog:'
         version: 6.3.3(@types/node@24.12.4)(idb-keyval@6.2.2)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.3)(tsx@4.21.0)(yaml@2.9.0)
       typescript:
-        specifier: 5.9.3
+        specifier: 'catalog:'
         version: 5.9.3
       vite-plus:
         specifier: 'catalog:'
@@ -58,25 +91,25 @@ importers:
   playground:
     dependencies:
       '@astrojs/node':
-        specifier: 10.1.1
+        specifier: 'catalog:'
         version: 10.1.1(astro@6.3.3(@types/node@24.12.4)(idb-keyval@6.2.2)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.3)(tsx@4.21.0)(yaml@2.9.0))
       '@x402/core':
-        specifier: 2.12.0
+        specifier: 'catalog:'
         version: 2.12.0
       '@x402/evm':
-        specifier: 2.12.0
+        specifier: 'catalog:'
         version: 2.12.0(bufferutil@4.1.0)(typescript@6.0.3)(utf-8-validate@5.0.10)
       '@x402/fetch':
-        specifier: 2.12.0
+        specifier: 'catalog:'
         version: 2.12.0
       astro:
-        specifier: 6.3.3
+        specifier: 'catalog:'
         version: 6.3.3(@types/node@24.12.4)(idb-keyval@6.2.2)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.3)(tsx@4.21.0)(yaml@2.9.0)
       astro-x402:
         specifier: workspace:*
         version: link:../packages/astro-x402
       viem:
-        specifier: 2.49.3
+        specifier: 'catalog:'
         version: 2.49.3(bufferutil@4.1.0)(typescript@6.0.3)(utf-8-validate@5.0.10)(zod@4.4.3)
 
 packages:

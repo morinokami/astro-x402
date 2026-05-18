@@ -43,14 +43,14 @@
     "check": "vp check"
   },
   "dependencies": {
-    "@x402/core": "2.12.0",
-    "@x402/extensions": "2.12.0"
+    "@x402/core": "catalog:",
+    "@x402/extensions": "catalog:"
   },
   "devDependencies": {
-    "@types/node": "24.12.4",
-    "@typescript/native-preview": "7.0.0-dev.20260517.1",
-    "astro": "6.3.3",
-    "typescript": "5.9.3",
+    "@types/node": "catalog:",
+    "@typescript/native-preview": "catalog:",
+    "astro": "catalog:",
+    "typescript": "catalog:",
     "vite-plus": "catalog:"
   },
   "peerDependencies": {
