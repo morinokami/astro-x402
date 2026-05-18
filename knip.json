@@ -3,7 +3,8 @@
   "tags": ["-lintignore"],
   "workspaces": {
     ".": {
-      "entry": ["vite.config.ts"]
+      "entry": ["vite.config.ts"],
+      "ignoreDependencies": ["@ls-lint/ls-lint", "publint", "sherif"]
     },
     "packages/astro-x402": {
       "entry": ["vite.config.ts", "src/index.ts", "src/**/*.test.ts"],
