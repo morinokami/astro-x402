@@ -3,6 +3,7 @@ packages:
   - playground
 catalog:
   "@astrojs/node": 10.1.1
+  "@ls-lint/ls-lint": 2.3.1
   "@types/node": 24.12.4
   "@typescript/native-preview": 7.0.0-dev.20260517.1
   "@x402/core": 2.12.0
@@ -11,6 +12,8 @@ catalog:
   "@x402/fetch": 2.12.0
   astro: 6.3.3
   knip: 6.14.1
+  publint: 0.3.21
+  sherif: 1.11.1
   typescript: 5.9.3
   viem: 2.49.3
   vite-plus: latest

@@ -10,8 +10,11 @@
     "prepare": "vp config"
   },
   "devDependencies": {
+    "@ls-lint/ls-lint": "catalog:",
     "@types/node": "catalog:",
     "knip": "catalog:",
+    "publint": "catalog:",
+    "sherif": "catalog:",
     "typescript": "catalog:",
     "vite-plus": "catalog:"
   },
