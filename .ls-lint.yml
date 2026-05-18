@@ -1,0 +1,12 @@
+ls:
+  packages/*/src:
+    .ts: kebab-case
+    .dir: kebab-case
+
+ignore:
+  - .git
+  - .vscode
+  - .zed
+  - .vite-hooks
+  - node_modules
+  - dist

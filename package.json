@@ -1,9 +1,24 @@
 {
-  "name": "root",
+  "name": "astro-x402-root",
   "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morinokami/astro-x402.git"
   },
-  "packageManager": "pnpm@10.33.2"
+  "type": "module",
+  "scripts": {
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "catalog:",
+    "@changesets/cli": "catalog:",
+    "@ls-lint/ls-lint": "catalog:",
+    "@types/node": "catalog:",
+    "knip": "catalog:",
+    "publint": "catalog:",
+    "sherif": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "packageManager": "pnpm@10.33.3"
 }

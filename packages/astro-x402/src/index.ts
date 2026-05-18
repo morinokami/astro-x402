@@ -1,21 +1,25 @@
 // Adapted from @x402/hono for Astro middleware and Request/Response APIs.
 
-import {
+import type {
   HTTPRequestContext,
   PaywallConfig,
   PaywallProvider,
-  x402HTTPResourceServer,
-  x402ResourceServer,
   RoutesConfig,
   FacilitatorClient,
+  SettlementOverrides,
+} from "@x402/core/server";
+import type { SchemeNetworkServer, Network } from "@x402/core/types";
+import type { APIContext, MiddlewareHandler } from "astro";
+
+import {
+  x402HTTPResourceServer,
+  x402ResourceServer,
   FacilitatorResponseError,
   getFacilitatorResponseError,
   SETTLEMENT_OVERRIDES_HEADER,
-  SettlementOverrides,
   checkIfBazaarNeeded,
 } from "@x402/core/server";
-import { SchemeNetworkServer, Network } from "@x402/core/types";
-import type { APIContext, MiddlewareHandler } from "astro";
+
 import { AstroAdapter } from "./adapter";
 
 /**
@@ -78,7 +82,7 @@ function instructionsToResponse(instructions: {
     if (!headers.has("Content-Type")) {
       headers.set("Content-Type", "text/html");
     }
-    return new Response(String(instructions.body ?? ""), {
+    return new Response(typeof instructions.body === "string" ? instructions.body : "", {
       status: instructions.status,
       headers,
     });
@@ -163,7 +167,7 @@ export function paymentMiddlewareFromHTTPServer(
       .then(({ bazaarResourceServerExtension }) => {
         httpServer.server.registerExtension(bazaarResourceServerExtension);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("Failed to load bazaar extension:", err);
       });
   }

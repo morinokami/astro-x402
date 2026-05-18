@@ -1,6 +1,6 @@
 {
   "name": "playground",
-  "version": "0.0.1",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -12,13 +12,13 @@
     "x402:pay": "node scripts/pay-protected.ts"
   },
   "dependencies": {
-    "@astrojs/node": "10.1.0",
-    "@x402/core": "2.11.0",
-    "@x402/evm": "2.11.0",
-    "@x402/fetch": "2.11.0",
-    "astro": "6.3.1",
+    "@astrojs/node": "catalog:",
+    "@x402/core": "catalog:",
+    "@x402/evm": "catalog:",
+    "@x402/fetch": "catalog:",
+    "astro": "catalog:",
     "astro-x402": "workspace:*",
-    "viem": "2.48.11"
+    "viem": "catalog:"
   },
   "engines": {
     "node": ">=22.12.0"
