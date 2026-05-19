@@ -381,6 +381,14 @@ export function paymentMiddlewareFromConfig(
   return paymentMiddleware(routes, ResourceServer, paywallConfig, paywall, syncFacilitatorOnStart);
 }
 
+export type {
+  X402IntegrationOptions,
+  IntegrationFacilitatorConfig,
+  JsonSafeRouteConfig,
+  JsonSafeRoutesConfig,
+} from "./integration";
+export { default } from "./integration";
+
 export { x402ResourceServer, x402HTTPResourceServer } from "@x402/core/server";
 
 export type {
