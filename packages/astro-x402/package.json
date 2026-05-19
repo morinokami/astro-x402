@@ -1,6 +1,6 @@
 {
   "name": "astro-x402",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Astro middleware integration for the x402 Payment Protocol.",
   "keywords": [
     "astro",
